@@ -68,10 +68,10 @@ function built_graph()
 
   var nodes = svg.selectAll("circle")
     .data(dataset.nodes)
-    .enter()  
+    .enter()
     .append("circle")
     .attr({"r":10})
-    .style("fill",function(d,i){return colors(i+2);})
+    .style("fill",function(d,i){return colors(i);})
     .call(force.drag)
 
 
@@ -168,3 +168,4 @@ function built_graph()
       });
   });
 }
+
